@@ -1,0 +1,8 @@
+[
+    ["openai", "HuggingFaceH4/zephyr-7b-beta"],
+    ["llama_fft_mht", "mistralai/Mistral-7B-Instruct-v0.1"],
+    ["flan_m2w", "google/flan-t5-large"],
+    ["flan_m2w", "google/flan-t5-base"],
+    ["flan_mht_v2", "osunlp/MindAct_ActionPrediction_flan-t5-large"],
+    ["flan_mht_v2", "osunlp/MindAct_ActionPrediction_flan-t5-base"]
+]

@@ -1,0 +1,16 @@
+{
+    "chrf": "chrF",
+    "intent-match": "IM",
+    "click": "\\texttt{click}",
+    "submit": "\\texttt{submit}",
+    "change": "\\texttt{change}",
+    "textinput": "\\texttt{textinput}",
+    "load": "\\texttt{load}",
+    "say": "\\texttt{say}",
+    "chrf-urlf": "SeqF",
+    "urlf": "URLF",
+    "iou": "IoU",
+    "element-group": "Element Group",
+    "text-group": "Text Group",
+    "overall": "Overall"
+}
