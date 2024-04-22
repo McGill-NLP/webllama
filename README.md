@@ -121,6 +121,10 @@ If you use `WebLlama` in your research, please cite the following paper (upon wh
 }
 ```
 
+## License
+
+The code in this repository is licensed under the MIT license, unless otherwise specified in the header of the file. Other materials (models, data, images) have their own licenses, which are specified in the original pages.
+
 ## FAQ
 
 ### How can I contribute to the project?
