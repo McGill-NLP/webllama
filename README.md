@@ -16,7 +16,7 @@
 > [!IMPORTANT] 
 > **We are thrilled to release [`Llama-3-8B-Web`](https://huggingface.co/McGill-NLP/Llama-3-8B-Web), the most capable agent built with 🦙 Llama 3 and finetuned for web navigation with dialogue. You can download the agent from the 🤗 [Huggingface Model Hub](https://huggingface.co/McGill-NLP/Llama-3-8B-Web).**
 
-| `WebLlama` will provide the tools to build powerful Llama agents for browsing the web on your behalf | Our first model, [`Llama-3-8B-Web`](https://huggingface.co/McGill-NLP/Llama-3-8B-Web), surpasses GPT-4V (`*`zero-shot) by 18% on [`WebLINX`](https://mcgill-nlp.github.io/weblinx/) |
+| `WebLlama` helps you build powerful agents, powered by Meta Llama 3, for browsing the web on your behalf | Our first model, [`Llama-3-8B-Web`](https://huggingface.co/McGill-NLP/Llama-3-8B-Web), surpasses GPT-4V (`*`zero-shot) by 18% on [`WebLINX`](https://mcgill-nlp.github.io/weblinx/) |
 |:---: | :---: |
 | ![Built with Meta Llama 3](assets/llama-3.jpg) | ![Comparison with GPT-4V](assets/LlamaAndGPT.png) |
 
