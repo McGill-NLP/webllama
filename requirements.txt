@@ -1,0 +1,3 @@
+weblinx[eval]
+streamlit
+-r modeling/requirements.txt

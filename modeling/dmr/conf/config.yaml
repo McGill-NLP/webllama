@@ -1,0 +1,44 @@
+project_dir: ${oc.env:WEBLINX_PROJECT_DIR}
+seed: 123
+project_name: dmr
+
+data:
+  split_path: ${project_dir}/wl_data/splits.json
+  base_dir: ${project_dir}/wl_data/demonstrations
+
+model:
+  name: sentence-transformers/all-MiniLM-L6-v2
+  max_seq_length: 512
+  use_bf16: True
+  similarity: cos_sim
+  save_dir: ${project_dir}/checkpoints/${project_name}/${model.name}
+
+train:
+  split: train
+  num_epochs: 10
+  max_neg_per_turn: 9
+  batch_size_per_device: 64
+  dataloader_num_workers: 8
+  optim: adamw
+  gradient_checkpointing: True
+  learning_rate: 0.00003
+  warmup_steps: 500
+  # Available schedulers: 
+  # constantlr, warmupconstant, warmuplinear, warmupcosine, warmupcosinewithhardrestarts
+  scheduler: warmuplinear
+
+eval:
+  split: dev
+  mrr_k: 50
+  batch_size_per_device: 64
+  result_dir: ${project_dir}/results/${project_name}/${model.name}/${eval.split}
+
+hydra:
+  run:
+    dir: ${project_dir}/logs/${project_name}/${hydra.job.name}/${now:%Y-%m-%d-%H:%M:%S}
+  # Use the same for sweep's subdir
+  sweep:
+    dir: ${hydra.run.dir}
+  job:
+    chdir: False
+  verbose: INFO
