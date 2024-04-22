@@ -1,0 +1,58 @@
+project_dir: ${oc.env:WEBLLAMA_PROJECT_DIR}
+seed: 123
+project_name: llama_ft
+
+data:
+  num_proc: 8
+  split_path: ${project_dir}/wl_data/splits.json
+  base_dir: ${project_dir}/wl_data/demonstrations/
+
+train:
+  split: train
+  num_epochs: 3
+  learning_rate: 3e-5
+  batch_size_per_device: 4
+  gradient_accumulation_steps: 1
+  dataloader_num_workers: 8
+  gradient_checkpointing: True
+  use_accelerator_device_map: True # Set to true if using `accelerate`
+  use_auto_device_map: False # Set to false if using `accelerate`
+  warmup_ratio: 0
+  scheduler: linear
+  optim: adamw_torch
+
+eval:
+  split: valid
+  batch_size_per_device: 8
+  result_dir: ${project_dir}/results/${project_name}/${eval.split}/${model.name}
+  load_from_save_dir: True
+  test_run: False
+
+model:
+  name: meta-llama/Meta-Llama-3-8B-Instruct
+  use_flash_attention_2: True
+  tokenizer: ${model.name}
+  template_tokenizer: ${model.tokenizer}
+  max_inp_len: null
+  max_out_len: 256
+  use_rope: True
+  use_flash_attention_2: True
+  save_dir: ${project_dir}/checkpoints/${project_name}/${model.name}
+
+candidates:
+  k: 10
+  model: McGill-NLP/MiniLM-L6-dmr  # unused but potentially useful
+  project_name: dmr  # unused but potentially useful
+  split: ${eval.split}
+  train_path: ${project_dir}/wl_data/candidates/train.jsonl
+  path: ${project_dir}/wl_data/candidates/${candidates.split}.jsonl
+
+hydra:
+  run:
+    dir: ${project_dir}/logs/${project_name}/${hydra.job.name}/${now:%Y-%m-%d-%H:%M:%S}
+  # Use the same for sweep's subdir
+  sweep:
+    dir: ${hydra.run.dir}
+  job:
+    chdir: False
+  verbose: INFO

@@ -1,0 +1,11 @@
+{
+    "Sheared-LLaMA": "S-LLaMA",
+    "MindAct-T5": "MindAct",
+    "submit": "sbmt",
+    "textinput": "input",
+    "Overall": "All",
+    "URLF": "urlF",
+    "\\multicolumn{2}{r}{All}": "All & All",
+    "Text Group": "TG",
+    "Element Group": "EG"
+}

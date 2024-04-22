@@ -1,0 +1,23 @@
+transformers==4.35.0  # Future version may break the code, upgrade with caution
+lxml
+numpy
+datasets
+torch
+sentence-transformers
+peft
+backoff
+tensorboardX
+hydra-core
+peft
+accelerate
+optimum
+openai
+tiktoken
+trl
+bitsandbytes
+coloredlogs
+sacrebleu
+bert-score
+packaging
+ninja
+wheel
