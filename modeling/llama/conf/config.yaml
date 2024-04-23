@@ -36,7 +36,6 @@ model:
   max_inp_len: null
   max_out_len: 256
   use_rope: True
-  use_flash_attention_2: True
   save_dir: ${project_dir}/checkpoints/${project_name}/${model.name}
 
 candidates:
