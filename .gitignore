@@ -161,7 +161,7 @@ cython_debug/
 
 # CUSTOM
 modeling/checkpoints
-modeling/results/**/
+modeling/results/
 modeling/results/**/hydra_path.txt
 modeling/results/**/hashes.json
 modeling/results/**/scores-fta-1.csv
