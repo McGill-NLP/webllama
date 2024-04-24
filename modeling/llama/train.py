@@ -48,6 +48,7 @@ def main(cfg):
     tokenizer.pad_token = tokenizer.eos_token
 
     model_kwargs = dict(torch_dtype=torch.bfloat16)
+    model_kwargs['trust_remote_code'] = cfg.model.get('trust_remote_code', False)
 
     if cfg.train.use_accelerator_device_map:
         accelerator = Accelerator()
@@ -58,7 +59,7 @@ def main(cfg):
 
     if cfg.model.use_flash_attention_2:
         model_kwargs["use_flash_attention_2"] = True
-
+    
     model = AutoModelForCausalLM.from_pretrained(cfg.model.name, **model_kwargs)
 
     format_intent = build_formatter_for_multichoice()

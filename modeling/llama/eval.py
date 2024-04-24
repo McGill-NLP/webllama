@@ -79,6 +79,7 @@ def main(cfg):
     )
 
     model_kwargs = dict(device_map="auto", torch_dtype=torch.bfloat16)
+    model_kwargs['trust_remote_code'] = cfg.model.get('trust_remote_code', False)
 
     if cfg.model.use_rope:
         model_kwargs["rope_scaling"] = {"type": "dynamic", "factor": 2.0}
