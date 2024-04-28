@@ -50,7 +50,7 @@ from transformers import pipeline
 
 # We use validation data, but you can use your own data here
 valid = load_dataset("McGill-NLP/WebLINX", split="validation")
-snapshot_download("McGill-NLP/WebLINX", "dataset", allow_patterns="templates/*")
+snapshot_download("McGill-NLP/WebLINX", repo_type="dataset", allow_patterns="templates/*")
 template = open('templates/llama.txt').read()
 
 # Run the agent on a single state (text representation) and get the action
