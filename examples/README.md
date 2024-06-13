@@ -37,7 +37,7 @@ Then, connect to your remote server via SSH:
 
 ```bash
 # 8450 is the default port for our server
-ssh -N -L 8450:localhost:8450 nlp-gpu-2
+ssh -N -L 8450:localhost:8450 "<user>@<remote>"
 ```
 
 Now, on your local machine, run:
