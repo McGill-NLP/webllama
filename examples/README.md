@@ -28,7 +28,7 @@ First, remotely, run:
 
 ```bash
 # change if needed:
-export CUDA_VISIBLE_DEVICES=7
+export CUDA_VISIBLE_DEVICES=0
 
 python -m webllama.experimental.web.server --save_logs
 ```
