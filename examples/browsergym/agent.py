@@ -8,7 +8,7 @@ from browsergym.utils.obs import flatten_axtree_to_str, flatten_dom_to_str
 from browsergym.core.action.highlevel import HighLevelActionSet
 import weblinx as wl
 
-import webllama_experimental as wa
+import webllama.experimental as wa
 
 from webllama_experimental.integrations.browsergym.functions import (
     say,
