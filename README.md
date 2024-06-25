@@ -98,13 +98,20 @@ Although the 24K training examples from [`WebLINX`](https://mcgill-nlp.github.io
 
 We are working hard to make it easy for you to deploy Llama web agents to the web. We want to integrate `WebLlama` with existing deployment platforms, including Microsoft's Playwright, ServiceNow Research's BrowserGym, and other partners.
 
+At the moment, we offer the following integrations:
+* `Browsergym`: Please find more information in [`examples/README.md`](examples/README.md) and [`docs/README.md`](docs/README.md).
+
 ## Code
 
-The code for finetuning the model and evaluating it on the [`WebLINX`](https://mcgill-nlp.github.io/weblinx/) benchmark is available now. You can find the detailed instructions in [modeling](modeling/README.md).
+The code for finetuning the model and evaluating it on the [`WebLINX`](https://mcgill-nlp.github.io/weblinx/) benchmark is available now. 
+* **Modeling**: You can find the detailed instructions in [modeling](modeling/README.md) for training `Llama-3-8B-Web` on the `WebLINX` dataset.
+* **Examples**: We provide a few example for using the `webllama` API and models, including web API, end-to-end, and BrowserGym integration. You can find them in [examples](examples/README.md).
+* **App**: We provide a simple Streamlit app for visualizing the results of your model on the `WebLINX` benchmark. You can find the code in [app](app/Results.py).
+* **Docs**: We provide detailed documentation for the code in [docs](docs/README.md).
 
 
 > 👷‍♀️ **Next steps**\
-> We are actively working on new data, evaluation, and deployment integrations at the moment, so stay tuned!
+> We are actively working on new data and evaluation at the moment! If you want to help, please create an issue describing what you would like to contribute, and we will be happy to help you get started.
 
 ## Citation
 
@@ -129,4 +136,4 @@ The code in this repository is licensed under the MIT license, unless otherwise 
 
 ### How can I contribute to the project?
 
-We are actively looking for collaborators to help us build the best Llama-3 web agents! To get started, open an issue about what you would like to contribute, and once it has been discussed, you can submit a pull request. We will also soon be announcing a Discord channel for the project, where you can ask questions and discuss with other contributors.
+We are actively looking for collaborators to help us build the best Llama-3 web agents! To get started, open an issue about what you would like to contribute, and once it has been discussed, you can submit a pull request.

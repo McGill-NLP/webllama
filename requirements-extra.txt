@@ -1,0 +1,6 @@
+weblinx[eval]>=0.3.0.rc1
+streamlit
+sentence-transformers
+transformers
+playwright
+browsergym

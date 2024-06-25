@@ -50,12 +50,12 @@ export WEBLLAMA_PROJECT_DIR=$(pwd)
 You need to install the dependencies by running the following command:
 
 ```bash
-pip install -r requirements.txt
+pip install -e .[extra]
+pip install -r modeling/requirements.txt
 ```
 
 However, due to `flash-attention` requiring `torch` to be pre-installed, it has to be install right after everything else has been installed:
 ```bash
-pip install wheel
 # Regular install
 pip install "flash-attn>=2.3.0"
 # IF you have limited RAM, you can try this:
@@ -138,7 +138,6 @@ In this case, `-b` is the base directory for the demonstrations, and `-d` is the
 Behind the scene, this will use the `weblinx.eval.auto_eval_and_save` function to run the evaluation metrics. If you want more control, you can also use that `weblinx.eval.auto_eval_and_save` function directly if you prefer; for an example, check out `weblinx/eval/__main__.py`.
 
 Note that it might be slow the first time you run, because it reads a lot of demonstrations and load millions of files. However, a demo-level cache is automatically created (see `./.cache/demonstrations`), so the next time you run it, it should be much faster.
-
 
 ### Dense Markup Ranking (DMR)
 

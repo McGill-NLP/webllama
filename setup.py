@@ -8,8 +8,15 @@ with open(f"{package_name}/version.py") as fp:
 with open("README.md") as fp:
     long_description = fp.read()
 
+with open('requirements-extra.txt')  as f:
+    extras = f.read().splitlines()
+
+with open('requirements-basic.txt') as f:
+    install_requires = f.read().splitlines()
+
 extras_require = {
     "dev": ["black"],
+    "extra": extras,
 }
 # Dynamically create the 'all' extra by combining all other extras
 extras_require["all"] = sum(extras_require.values(), [])
@@ -24,7 +31,7 @@ setup(
     long_description=long_description,
     packages=find_packages(include=[f"{package_name}*"]),
     package_data={},
-    install_requires=['scipy', 'numpy'],
+    install_requires=install_requires,
     extras_require=extras_require,
     classifiers=[
         "Programming Language :: Python :: 3",
