@@ -1,5 +1,5 @@
 from functools import partial
-import webllama_experimental as wa
+import webllama.experimental as wa
 import weblinx as wl
 
 demos = wl.list_demonstrations("tests/demonstrations")

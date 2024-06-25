@@ -5,7 +5,7 @@ import logging
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, pipeline
 import weblinx as wl
-import webllama_experimental as wa
+import webllama.experimental as wa
 
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 

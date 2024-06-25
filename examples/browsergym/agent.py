@@ -10,7 +10,7 @@ import weblinx as wl
 
 import webllama.experimental as wa
 
-from webllama_experimental.integrations.browsergym.functions import (
+from webllama.experimental.integrations.browsergym.functions import (
     say,
     click,
     textinput,
@@ -18,7 +18,7 @@ from webllama_experimental.integrations.browsergym.functions import (
     scroll,
     wait,
 )
-from webllama_experimental.integrations.browsergym import replace_bid_with_wl_uid, reverse_dict, postprocess_for_browsergym
+from webllama.experimental.integrations.browsergym import replace_bid_with_wl_uid, reverse_dict, postprocess_for_browsergym
 
 def remap_bboxes(bboxes, attrs_map):
     """

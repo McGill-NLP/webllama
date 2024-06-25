@@ -3,7 +3,7 @@ import http.client
 import json
 
 import weblinx as wl
-import webllama_experimental as wa
+import webllama.experimental as wa
 
 def run_http():
     demos = wl.list_demonstrations("tests/demonstrations")
