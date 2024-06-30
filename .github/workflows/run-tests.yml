@@ -1,0 +1,53 @@
+name: Run Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.9'  # Specify your required Python version
+
+    - name: Cache Python dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('tests/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r tests/requirements.txt  # Assumes you have a requirements.txt file
+
+    - name: Cache test assets
+      uses: actions/cache@v2
+      with:
+        path: tests/demonstrations
+        key: assets-${{ github.sha }}
+        restore-keys: |
+          assets-
+
+    - name: Download test demos from release URL into `tests/demonstrations`
+      run: |
+        mkdir -p tests/demonstrations
+        curl -L -o tests/demonstrations/aaabtsd.zip https://github.com/McGill-NLP/weblinx/releases/download/tests-assets/aaabtsd.zip
+        unzip -u tests/demonstrations/aaabtsd.zip -d tests/demonstrations
+        curl -L -o tests/demonstrations/aajfwoq.zip https://github.com/McGill-NLP/weblinx/releases/download/tests-assets/aajfwoq.zip
+        unzip -u tests/demonstrations/aajfwoq.zip -d tests/demonstrations
+    
+    - name: Run tests
+      run: |
+        python -m unittest discover -s tests

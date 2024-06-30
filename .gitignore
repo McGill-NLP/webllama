@@ -173,3 +173,6 @@ app/data/inputs.json
 modeling/logs/
 venv*/
 .python-version
+
+# TESTS
+tests/demonstrations

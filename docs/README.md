@@ -386,3 +386,7 @@ To be added.
 ### Build `webllama.experimental.classes.State`
 
 To be added.
+
+## Contributing
+
+For more information on contributing, please check out the [contributing docs](docs/CONTRIBUTING.md).
