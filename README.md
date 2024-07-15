@@ -30,6 +30,34 @@
 | Deployment | We want to make it easy to integrate Llama models with existing deployment platforms, including Playwright, Selenium, and BrowserGym. We are currently focusing on making this a reality. |
 
 
+<details>
+<summary>Click to show citation</summary><br>
+
+If you use `WebLlama` in your research, you can cite the ICML 2024 paper upon which the training and evaluation are originally based on, by adding the following to your bibtex file:
+
+```
+@misc{lu_2024_weblinx,
+      title={WebLINX: Real-World Website Navigation with Multi-Turn Dialogue}, 
+      author={Xing Han Lù and Zdeněk Kasner and Siva Reddy},
+      year={2024},
+      eprint={2402.05930},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
+
+Example usage (in latex):
+
+```
+We use the WebLlama library, which builds on top of WebLINX \citep{lu_2024_weblinx}.
+```
+
+```
+We use Llama-3-8B-Web, a model finetuned on WebLINX demonstrations \citep{lu_2024_weblinx}.
+```
+
+</details>
+
 ## Modeling
 
 > [!NOTE]
@@ -113,20 +141,6 @@ The code for finetuning the model and evaluating it on the [`WebLINX`](https://m
 > 👷‍♀️ **Next steps**\
 > We are actively working on new data and evaluation at the moment! If you want to help, please create an issue describing what you would like to contribute, and we will be happy to help you get started.
 
-## Citation
-
-If you use `WebLlama` in your research, please cite the following paper (upon which the data, training and evaluation are originally based on):
-
-```
-@misc{lù2024weblinx,
-      title={WebLINX: Real-World Website Navigation with Multi-Turn Dialogue}, 
-      author={Xing Han Lù and Zdeněk Kasner and Siva Reddy},
-      year={2024},
-      eprint={2402.05930},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-```
 
 ## License
 
@@ -137,3 +151,29 @@ The code in this repository is licensed under the MIT license, unless otherwise 
 ### How can I contribute to the project?
 
 We are actively looking for collaborators to help us build the best Llama-3 web agents! To get started, open an issue about what you would like to contribute, and once it has been discussed, you can submit a pull request.
+
+
+## Citation
+
+If you use `WebLlama` in your research, you can cite the ICML 2024 paper upon which the training and evaluation are originally based on, by adding the following to your bibtex file:
+
+```
+@misc{lu_2024_weblinx,
+      title={WebLINX: Real-World Website Navigation with Multi-Turn Dialogue}, 
+      author={Xing Han Lù and Zdeněk Kasner and Siva Reddy},
+      year={2024},
+      eprint={2402.05930},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
+
+Example usage (in latex):
+
+```
+We use the WebLlama library, which builds on top of WebLINX \citep{lu_2024_weblinx}.
+```
+
+```
+We use Llama-3-8B-Web, a model finetuned on WebLINX demonstrations \citep{lu_2024_weblinx}.
+```
