@@ -13,10 +13,7 @@
 
 </div>
 
-> [!IMPORTANT] 
-> **We are thrilled to release [`Llama-3-8B-Web`](https://huggingface.co/McGill-NLP/Llama-3-8B-Web), the most capable agent built with 🦙 Llama 3 and finetuned for web navigation with dialogue. You can download the agent from the 🤗 [Hugging Face Model Hub](https://huggingface.co/McGill-NLP/Llama-3-8B-Web).**
-
-| `WebLlama` helps you build powerful agents, powered by Meta Llama 3, for browsing the web on your behalf | Our first model, [`Llama-3-8B-Web`](https://huggingface.co/McGill-NLP/Llama-3-8B-Web), surpasses GPT-4V (`*`zero-shot) by 18% on [`WebLINX`](https://mcgill-nlp.github.io/weblinx/) |
+| `WebLlama` helps you build powerful agents, powered by Meta Llama 3, for browsing the web on your behalf | Our first model, [`Llama-3-8B-Web`](https://huggingface.co/McGill-NLP/Llama-3-8B-Web), surpasses GPT-4V (`*`zero-shot) by 18% on [`WebLINX 1.0`](https://mcgill-nlp.github.io/weblinx/) |
 |:---: | :---: |
 | ![Built with Meta Llama 3](assets/llama-3.jpg) | ![Comparison with GPT-4V](assets/LlamaAndGPT.png) |
 
@@ -120,6 +117,9 @@ streamlit run app/Results.py
 Although the 24K training examples from [`WebLINX`](https://mcgill-nlp.github.io/weblinx/) provide a good starting point for training a capable agent, we believe that more data is needed to train agents that can generalize to a wide range of web navigation tasks. Although it has been trained and evaluated on 150 websites, there are millions of websites that has never been seen by the model, with new ones being created every day. 
 
 **This motivates us to continuously curate, compile and release datasets for training better agents.** As an immediate next step, we will be incorporating `Mind2Web`'s training data into the equation, which also covers over 100 websites.
+
+> [!NOTE] 
+> WebLINX is now available as a benchmark through [BrowserGym](https://github.com/ServiceNow/BrowserGym), allowing you to access demonstration steps in the same way you would access a web agent environment like [WebArena](https://webarena.dev/) or [MiniWoB](https://miniwob.farama.org/index.html). This also allows you to run agents from the [Agentlab](https://github.com/ServiceNow/AgentLab) library, including agents that achieve SOTA performance through Claude-3.5-Sonnet. To enable this integration, we are releasing the `weblinx-browsergym` extension for BrowserGym on PyPi, as well as a [new dataset, WebLINX 1.1, derived from WebLINX on Huggingface](https://huggingface.co/datasets/McGill-NLP/weblinx-browsergym). In WebLINX 1.1, a small number of demonstrations were removed after processing, but no new demonstration was added. There are substantial changes to the steps being evaluated, with the inclusion of tab actions. Please report your results as "WebLINX-1.1", "WebLINX-BrowserGym" or "WebLINX-BG" in your work, to differentiate from the [initial release of weblinx (1.0)](https://huggingface.co/datasets/McGill-NLP/WebLINX/tree/v1.0).
 
 
 ## Deployment
