@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "WebLlama"
+abstract: "Llama-powered agents that browse the web by following instructions and talking to you."
+authors:
+  - family-names: "Lù"
+    given-names: "Xing Han"
+  - name: "McGill NLP"
+version: "0.1.0"
+date-released: "2024-06-25"
+license: MIT
+repository-code: "https://github.com/McGill-NLP/webllama"
+url: "https://webllama.github.io"
+keywords:
+  - web-agents
+  - llama
+  - conversational-web-navigation
+  - weblinx
+preferred-citation:
+  type: article
+  title: "WebLINX: Real-World Website Navigation with Multi-Turn Dialogue"
+  authors:
+    - family-names: "Lù"
+      given-names: "Xing Han"
+    - family-names: "Kasner"
+      given-names: "Zdeněk"
+    - family-names: "Reddy"
+      given-names: "Siva"
+  year: 2024
+  journal: "arXiv preprint arXiv:2402.05930"
+  url: "https://arxiv.org/abs/2402.05930"
+  notes: "Published at ICML 2024 (Spotlight). Training and evaluation in WebLlama are based on this paper."
+  identifiers:
+    - type: other
+      value: "arXiv:2402.05930"
+      description: "The arXiv preprint of the paper"
